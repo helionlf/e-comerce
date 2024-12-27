@@ -15,10 +15,13 @@ class ProdutoController extends Controller
     public function cadastrar_produto(Request $request) {
         Produto::create([
             'nome' => $request->nome,
+            'descricao' => $request->descricao,
             'valor' => $request->valor,
+            'slug' => $request->slug,
+            'imagem' => $request->imagem,
             'estoque' => $request->estoque,
         ]);
-    
+
         return redirect('/inicio/admin');
     }
 
