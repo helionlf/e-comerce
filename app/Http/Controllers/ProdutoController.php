@@ -38,7 +38,10 @@ class ProdutoController extends Controller
         } elseif ($request->isMethod('post')) {
             $produto->update([
                 'nome' => $request->nome,
+                'descricao' => $request->descricao,
                 'valor' => $request->valor,
+                'slug' => $request->slug,
+                'imagem' => $request->imagem,
                 'estoque' => $request->estoque,
             ]);
     

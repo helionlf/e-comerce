@@ -42,8 +42,8 @@
             </div>
 
             <div class="container">
-                <button class="btn orange">Continuar comprando</button>
-                <button class="btn green">Finalizar compra</button>
+                <button class="btn orange">Continuar comprando <i class="material-icons right">add_shopping_cart</i></button>
+                <button class="btn green">Finalizar compra <i class="material-icons right">payment</i></button>
             </div>
         </section>
     </main>

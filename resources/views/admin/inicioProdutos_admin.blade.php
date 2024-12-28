@@ -37,7 +37,7 @@
         </section>
 
         <section>
-            <h2>Lista de Produtos</h2>
+            <h2 class="center">Lista de Produtos</h2>
             <div class="container_produtos">
                 <div class="row container">
                     @foreach ($produto as $prod)
@@ -54,8 +54,8 @@
                                     <br>
                                     <p>Valor: {{ $prod->valor }}</p>
                                     <p>Estoque: {{ $prod->estoque }}</p>
-                                    <a class="btn orange" href="/editar-produto/admin/{{$prod->id}}">editar</a>
-                                    <a class="btn orange" href="/excluir-produto/admin/{{$prod->id}}">excluir</a>
+                                    <a class="btn orange" href="/editar-produto/admin/{{$prod->id}}">editar <i class="material-icons left">create</i></a>
+                                    <a class="btn red" href="/excluir-produto/admin/{{$prod->id}}">excluir <i class="material-icons left">delete</i></a>
                                 </div>
                             </div>
                         </div>

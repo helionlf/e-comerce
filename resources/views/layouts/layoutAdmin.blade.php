@@ -29,7 +29,7 @@
                     {{-- </nav> --}}
                 @else
                 {{-- <nav class="navlist"> --}}
-                    <li><a href="{{ '/login' }}">Login</a></li>
+                    <li><a href="{{ '/login' }}">Login <i class="material-icons right">account_circle</i></a></li>
                 {{-- </nav> --}}
                 @endauth
 
