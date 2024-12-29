@@ -25,6 +25,11 @@ class ProdutoController extends Controller
         return redirect('/inicio/admin');
     }
 
+    public function detalhar_produto($id) {
+        $produto = Produto::find($id);
+        return view('user/detalhesProduto', ['produto' => $produto]);
+    }
+
     public function ver_produto($id) {
         $produto = Produto::find($id);
         return view('admin/detalhesProduto_admin', ['produto' => $produto]);

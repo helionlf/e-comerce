@@ -37,6 +37,8 @@ Route::post('/carrinho', [CarrinhoController::class, 'adicionarCarrinho']);
 
 Route::post('/remover', [CarrinhoController::class, 'removerCarrinho']);
 
+Route::get('/detalhes-produto/{id}', [ProdutoController::class, 'detalhar_produto']);
+
 Route::view('/login', 'user.form')->name('login.form');
 Route::post('/auth', [LoginController::class, 'auth']);
 

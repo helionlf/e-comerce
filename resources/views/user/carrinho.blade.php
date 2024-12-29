@@ -5,7 +5,7 @@
 
     <main>
         <section>
-            <h2>Meu carrinho - {{$itens->count()}} produto(s)</h2>
+            <h2 class="center">Meu carrinho - {{$itens->count()}} produto(s)</h2>
             <div class="container_produtos">
                 <div class="row container">
 
@@ -42,7 +42,7 @@
             </div>
 
             <div class="container">
-                <button class="btn orange">Continuar comprando <i class="material-icons right">add_shopping_cart</i></button>
+                <a class="btn orange" href="/inicio">Continuar comprando <i class="material-icons right">add_shopping_cart</i></a>
                 <button class="btn green">Finalizar compra <i class="material-icons right">payment</i></button>
             </div>
         </section>

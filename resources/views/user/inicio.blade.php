@@ -37,7 +37,7 @@
                                 <div class="card-image">
                                     <img src=" {{ $prod->imagem }} ">
                                     <span class="card-title">{{ $prod->nome }}</span>
-                                    <a title="Ver detalhes" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">visibility</i></a>
+                                    <a href="/detalhes-produto/{{$prod->id}}" class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">visibility</i></a>
                                 </div>
                                 <div class="card-content">
                                     <p>{{ Str::limit($prod->descricao, 15) }}</p>

@@ -38,26 +38,7 @@
               </ul>
             </div>
         </nav>
-
-        {{-- <a href="/inicio" class="logo">Liberdade Peças</a>
-        <nav class="navlist">
-            <li><a href="/inicio">Início</a></li>
-            <li><a href="/carrinho">Carrinho <span> {{ \Cart::getContent()->count() }} </span> </a></li>
-            <li><a href="#">Comprar</a></li>
-            <li><a href="#">Contato</a></li>
-        </nav> --}}
-
-        {{-- @auth
-            <nav class="navlist">
-                <li><a href="#">Olá {{auth()->user()->name}} </a></li>
-                <li><a href=" {{ '/logout' }} "> Sair </a></li>
-            </nav>
-        @else
-            <nav class="navlist">
-                <li><a href="{{ '/login' }}">Login</a></li>
-            </nav>
-        @endauth --}}
-        
+             
     </header>
 
     <!-- Conteúdo principal da página -->
