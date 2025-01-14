@@ -24,7 +24,7 @@ class ProdutoFactory extends Factory
             'nome' => $nome,
             'descricao' => $this->faker->paragraph(),
             'valor' => $this->faker->randomNumber(2),
-            'id_categoria' => Categoria::pluck('id')->random(),
+            'categoria_id' => Categoria::pluck('id')->random(),
             'slug' => Str::slug($nome),
             'imagem' => $this->faker->imageUrl(400, 400),
             'estoque' =>  $this->faker->numberBetween(0, 100),

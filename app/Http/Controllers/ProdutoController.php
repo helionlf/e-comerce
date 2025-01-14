@@ -17,6 +17,7 @@ class ProdutoController extends Controller
             'nome' => $request->nome,
             'descricao' => $request->descricao,
             'valor' => $request->valor,
+            'categoria_id' => $request->id_categoria,
             'slug' => $request->slug,
             'imagem' => $request->imagem,
             'estoque' => $request->estoque,
@@ -26,7 +27,8 @@ class ProdutoController extends Controller
     }
 
     public function detalhar_produto($id) {
-        $produto = Produto::find($id);
+        // $produto = Produto::find($id);
+        $produto = Produto::with('categoria')->find($id);
         return view('user/detalhesProduto', ['produto' => $produto]);
     }
 

@@ -19,8 +19,8 @@ return new class extends Migration
             $table->text('descricao');
             $table->decimal('valor');
 
-            $table->unsignedBigInteger('id_categoria');
-            $table->foreign('id_categoria')->references('id')->on('categorias')->onDelete('cascade')->onUodate('cascade');
+            $table->unsignedBigInteger('categoria_id');
+            $table->foreign('categoria_id')->references('id')->on('categorias')->onDelete('cascade')->onUodate('cascade');
 
             $table->string('slug');
             $table->string('imagem');

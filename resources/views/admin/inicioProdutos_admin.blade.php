@@ -20,6 +20,10 @@
                 <input type="text" name="valor">
                 <br>
 
+                <label>Categoria:</label>
+                <input type="number" name="id_categoria" min="1" max="5">
+                <br>
+
                 <label>Slog:</label>
                 <input type="text" name="slug">
                 <br>
