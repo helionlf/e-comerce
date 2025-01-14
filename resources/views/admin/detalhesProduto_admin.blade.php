@@ -17,6 +17,10 @@
                 <input type="text" name="valor" value="{{$produto->valor}}">
                 <br>
 
+                <label>Categoria:</label>
+                <input type="text" name="categoria" value="{{ $produto->categoria->nome }}">
+                <br>
+
                 <label>Imagem:</label>
                 <input type="text" name="imagem" value="{{$produto->imagem}}">
                 <br>
