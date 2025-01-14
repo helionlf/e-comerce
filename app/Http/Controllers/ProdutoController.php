@@ -7,8 +7,16 @@ use Illuminate\Http\Request;
 
 class ProdutoController extends Controller
 {
-    public function index(){
-        $produtos = Produto::all();
+    public function index(Request $request){
+        if ($request->input('search')) {
+            $search = $request->input('search');
+            $produtos = Produto::where('nome', 'like', "%{$search}%")
+                ->orWhere('descricao', 'like', "%{$search}%")
+                ->get();
+         } else {
+            $produtos = Produto::all();
+         }
+
         return view('admin/inicioProdutos_admin', ['produto' => $produtos]);
     }
 

@@ -41,6 +41,14 @@
         </section>
 
         <section>
+            <form action="/inicio/admin" method="GET">
+                @csrf
+                <input type="text" name="search" placeholder="O que você está procurando?">
+                <button class="btn blue" type="submit">Buscar <i class="material-icons right">search</i></button>
+            </form>
+        </section>
+
+        <section>
             <h2 class="center">Lista de Produtos</h2>
             <div class="container_produtos">
                 <div class="row container">
