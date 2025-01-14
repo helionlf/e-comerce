@@ -27,6 +27,14 @@
         </section> --}}
 
         <section>
+            <form action="/inicio" method="GET">
+                @csrf
+                <input type="text" name="search" placeholder="O que você está procurando?">
+                <button class="btn blue" type="submit">Buscar <i class="material-icons right">search</i></button>
+            </form>
+        </section>
+
+        <section>
             <h2 class="center"><span style="color: #f44336">Liberdade</span> peças</h2>
             <div class="container_produtos">
                 <div class="row container">
