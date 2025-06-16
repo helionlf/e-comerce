@@ -7,19 +7,37 @@ use Illuminate\Http\Request;
 
 class ProdutoController extends Controller
 {
-    public function index(){
-        $produtos = Produto::all();
+    public function index(Request $request){
+        if ($request->input('search')) {
+            $search = $request->input('search');
+            $produtos = Produto::where('nome', 'like', "%{$search}%")
+                ->orWhere('descricao', 'like', "%{$search}%")
+                ->get();
+         } else {
+            $produtos = Produto::all();
+         }
+
         return view('admin/inicioProdutos_admin', ['produto' => $produtos]);
     }
 
     public function cadastrar_produto(Request $request) {
         Produto::create([
             'nome' => $request->nome,
+            'descricao' => $request->descricao,
             'valor' => $request->valor,
+            'categoria_id' => $request->id_categoria,
+            'slug' => $request->slug,
+            'imagem' => $request->imagem,
             'estoque' => $request->estoque,
         ]);
-    
+
         return redirect('/inicio/admin');
+    }
+
+    public function detalhar_produto($id) {
+        // $produto = Produto::find($id);
+        $produto = Produto::with('categoria')->find($id);
+        return view('user/detalhesProduto', ['produto' => $produto]);
     }
 
     public function ver_produto($id) {
@@ -35,7 +53,10 @@ class ProdutoController extends Controller
         } elseif ($request->isMethod('post')) {
             $produto->update([
                 'nome' => $request->nome,
+                'descricao' => $request->descricao,
                 'valor' => $request->valor,
+                'slug' => $request->slug,
+                'imagem' => $request->imagem,
                 'estoque' => $request->estoque,
             ]);
     

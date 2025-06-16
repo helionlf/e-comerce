@@ -19,7 +19,7 @@ class CarrinhoController extends Controller
             'quantity' => $request->quantidade,
             'attributes' => array(
                 'estoque' => $request->estoque,
-                // 'imagem' => $request->imagem
+                'imagem' => $request->imagem
             )
         ]);
 
