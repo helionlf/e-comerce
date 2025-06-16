@@ -20,7 +20,7 @@ return new class extends Migration
             $table->decimal('valor');
 
             $table->unsignedBigInteger('categoria_id');
-            $table->foreign('categoria_id')->references('id')->on('categorias')->onDelete('cascade')->onUodate('cascade');
+            $table->foreign('categoria_id')->references('id')->on('categorias')->onDelete('cascade')->onUpdate('cascade');
 
             $table->string('slug');
             $table->string('imagem');
